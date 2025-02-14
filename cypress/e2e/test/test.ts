@@ -51,3 +51,20 @@ When('eu preencher o campo de telefone com {string}', (value) => {
 Then('o campo de telefone deve permanecer vazio', () => {
   CacTatPage.verifyPhoneIsEmpty(); // Verifica se o campo está vazio
 });
+
+
+Given('que eu esteja na página de formulário do Cat', () => {
+  CacTatPage.visit(); // Visita a página
+});
+
+When('prencho os campos', () => {
+  CacTatPage.fillMandatoryFieldsAndSubmit();
+
+  // Preenche o campo com valor inválido
+});
+Then  ('deve limpar todos campos', () => {
+
+  CacTatPage.clearFields()
+})
+
+

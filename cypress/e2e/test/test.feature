@@ -23,3 +23,11 @@ Scenario: Enviar formulário com sucesso
     Given que eu esteja na página de formulário
     When eu preencher o campo de telefone com "abcde"
     Then o campo de telefone deve permanecer vazio
+
+ Scenario: Preencher e limpar os campos nome, sobrenome, email, telefone e mensagem
+    Given que eu esteja na página de formulário do Cat
+    When  prencho os campos
+    Then  deve limpar todos campos
+    
+
+
